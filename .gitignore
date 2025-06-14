@@ -1,0 +1,12 @@
+# This is a sample .gitignore file for a Node.js project
+# Ignore log files
+logs/
+# Ignore npm debug log
+npm-debug.log*
+# Ignore environment variable files
+.env.local
+.env
+
+
+# Ignore node_modules directory
+node_modules/
