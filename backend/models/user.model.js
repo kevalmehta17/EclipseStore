@@ -32,12 +32,11 @@ const userSchema = new mongoose.Schema({
     ],
     role: {
         type: String,
-        enum: ["user", "admin"], //enum means the value must be one of these
-        default: "user",
+        enum: ["customer", "admin"], //enum means the value must be one of these
+        default: "customer", //default value if not provided
     }
-}, { timeStamps: true });
+}, { timestamps: true });
 
-const User = mongoose.model("User", userSchema);
 
 // Pre-save hook to hash the password before saving
 userSchema.pre("save", async function (next) {
@@ -63,4 +62,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
         throw new Error("Error comparing password");
     }
 }
+
+const User = mongoose.model("User", userSchema);
+
 export default User;
