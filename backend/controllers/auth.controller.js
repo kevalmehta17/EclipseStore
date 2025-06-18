@@ -83,6 +83,7 @@ export const signup = async (req, res) => {
 
 export const login = async (req, res) => {
     try {
+        // check if the request body has email and password
         const { email, password } = req.body;
         // Check if all fields are provided
         if (!email || !password) {
