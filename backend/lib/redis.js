@@ -5,7 +5,6 @@ dotenv.config();
 
 export const redis = new Redis(process.env.UPSTASH_REDIS_URL);
 
-
 // Redis Overview:
 // Redis is an in-memory data structure store, used as a database, cache, and message broker.
 // It supports various data structures such as strings, hashes, lists, sets, and sorted sets.
